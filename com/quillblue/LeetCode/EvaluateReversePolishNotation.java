@@ -1,7 +1,7 @@
 package com.quillblue.LeetCode;
 import java.util.*;
 
-public class Solution {
+public class EvaluateReversePolishNotation {
     public int evalRPN(String[] tokens) {
         Stack<Integer> processStack=new Stack<Integer>();
         for(int i=0;i<tokens.length;i++){
@@ -19,12 +19,14 @@ public class Solution {
     
     protected int calculate(int num1, int num2, String operand)
     {
-        switch(operand)
-        {
-            case "+":return num1+num2;
-            case "-":return num1-num2;
-            case "*":return num1*num2;
-            default:return num1/num2;
+        if (operand.equals("+")) {
+            return num1 + num2;
+        } else if (operand.equals("-")) {
+            return num1 - num2;
+        } else if (operand.equals("*")) {
+            return num1 * num2;
+        } else {
+            return num1 / num2;
         }
     }
 }

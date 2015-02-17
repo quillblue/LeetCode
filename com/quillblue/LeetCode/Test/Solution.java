@@ -11,8 +11,8 @@ public class Solution {
         if(A.length<3){return A.length;}
         occurList.add(A[0]);
         occurList.add(A[1]);
-        int count=1;
-        for(int i=1;i<A.length;i++){
+        int count=2;
+        for(int i=2;i<A.length;i++){
             if(occurList.get(count-1)!=A[i]||occurList.get(count-1)!=A[i]){
                 occurList.add(A[i]);
                 count++;

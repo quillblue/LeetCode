@@ -1,12 +1,11 @@
 package com.quillblue.LeetCode;
 
-public class Solution {
-    public int trailingZeroes(int n) {
-        int count=0;
-        while(n>1){
-            count+=n/5;
-            n/=5;
+public class ExcelSheetColumnNumber {
+    public int titleToNumber(String s) {
+        int result=0;
+        for(int i=0;i<s.length();i++){
+            result=result*26+(s.charAt(i)-'A'+1);
         }
-        return count;
+        return result;
     }
 }
